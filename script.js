@@ -57,3 +57,55 @@ document.addEventListener("DOMContentLoaded", function () {
 
   requestAnimationFrame(handleParallax);
 });
+
+// Smooth scroll
+const navLinks = document.querySelectorAll(".nav-links a");
+navLinks.forEach((link) => {
+  link.addEventListener("click", (e) => {
+    e.preventDefault();
+    const targetId = link.getAttribute("href").substring(1);
+    const targetElement = document.getElementById(targetId);
+    targetElement.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  });
+});
+
+// Scroll to top
+const scrollToTop = document.querySelector(".scroll-to-top");
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 500) {
+    scrollToTop.classList.remove("hidden");
+  } else {
+    scrollToTop.classList.add("hidden");
+  }
+});
+scrollToTop.addEventListener("click", () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+});
+
+// TODO Tooltip position FIX
+// document.querySelectorAll(".tooltip").forEach((tooltip) => {
+//   const textEl = tooltip.querySelector(".tooltip-text");
+
+//   tooltip.addEventListener("mouseenter", () => {
+//     const rect = textEl.getBoundingClientRect();
+//     const windowWidth = window.innerWidth;
+
+//     // Reset all positioning classes
+//     textEl.classList.remove("left", "right", "centered");
+
+//     // Smart repositioning
+//     if (rect.left < 20) {
+//       textEl.classList.add("right"); // shift right if too close to left
+//     } else if (rect.right > windowWidth - 20) {
+//       textEl.classList.add("left"); // shift left if too close to right
+//     } else {
+//       textEl.classList.add("centered"); // otherwise center
+//     }
+//   });
+// });
