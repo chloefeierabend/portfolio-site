@@ -1,0 +1,4 @@
+- add resume download
+- make hamburger menu for nav links for mobile/small screens
+- add projects section
+- add scroll to top button
