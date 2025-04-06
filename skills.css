@@ -1,0 +1,63 @@
+.skills-category {
+  margin-bottom: 2rem;
+}
+
+.skills-category h3 {
+  color: var(--accent);
+  margin-bottom: 0.5rem;
+}
+
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.skill {
+  background-color: var(--skills-bg);
+  color: var(--skills-text);
+  padding: 0.4rem 0.9rem;
+  border-radius: 5px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  box-shadow: none;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  transition: none;
+  cursor: default;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.3s ease forwards;
+}
+
+.skill:nth-child(1) {
+  animation-delay: 0.05s;
+}
+.skill:nth-child(2) {
+  animation-delay: 0.1s;
+}
+.skill:nth-child(3) {
+  animation-delay: 0.15s;
+}
+.skill:nth-child(4) {
+  animation-delay: 0.2s;
+}
+.skill:nth-child(5) {
+  animation-delay: 0.25s;
+}
+.skill:nth-child(6) {
+  animation-delay: 0.3s;
+}
+.skill:nth-child(7) {
+  animation-delay: 0.35s;
+}
+/* ...add as needed */
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
