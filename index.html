@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -10,19 +10,25 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
     <link rel="stylesheet" href="skills.css" />
+    <link rel="stylesheet" href="projects.css">
+    <link rel="stylesheet" href="scrollToTop.css">
     <script defer src="script.js"></script>
+    <script src="scriptTest.js"></script>
   </head>
-  <body>
+  <body data-theme="light">
     <header>
       <nav class="navbar">
         <div class="logo">Chloe Feierabend</div>
         <ul class="nav-links">
           <li><a href="#home">Home</a></li>
           <li><a href="#experience">Experience</a></li>
-          <li><a href="#projects">Projects</a></li>
+          <!-- Add Projects later -->
+          <!-- <li><a href="#projects">Projects</a></li> -->
           <li><a href="#skills">Skills</a></li>
-          <li><a href="#resume">Resume</a></li>
-          <li><button id="theme-toggle">🌓</button></li>
+          <!-- Add Resume later -->
+          <!-- <li><a href="#resume">Resume</a></li> -->
+          <button id="theme-toggle">🌞</button>
+
         </ul>
       </nav>
     </header>
@@ -114,7 +120,26 @@
 
     <section id="projects">
       <h2>Projects</h2>
-      <!-- ADD PROJECTS -->
+      <div class="projects-grid">
+        <div class="project-card">
+          <h3>Gnomeo and the Butterfly</h3>
+          <p>A 2D platformer game made in Unity with a team for a game jam, spanning across student success week.</p>
+          <img src="Images/logoGnomeo.png" alt="Project Screenshot" class="project-thumb">
+          <div class="project-links">
+            <a href="https://github.com/JoshLanesmith/Pandasaurus_2D_Platformer" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub</a>
+            <a href="https://chloefeierabend1.wixsite.com/chloe-feierabend/portfolio-collections/my-portfolio/gnomeo-and-the-butterfly" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-image"></i></i> Portfolio Images</a>
+          </div>
+        </div>
+        <div class="project-card">
+          <h3>Football Kicker (In-Progress)</h3>
+          <p>A 2D football kicking game made in Unity.</p>
+          <img src="Images/FootballFEK-02.png" alt="Project Screenshot" class="project-thumb">
+          <div class="project-links">
+            <!-- <a href="https://github.com/JoshLanesmith/Pandasaurus_2D_Platformer" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub</a> -->
+          </div>
+        </div>
+      </div>
+      <!-- ADD MORE PROJECTS -->
     </section>
 
     <section id="skills">
@@ -173,10 +198,15 @@
       </div>
     </section>
 
-    <section id="resume">
-      <h2>Resume</h2>
+    <!-- <section id="resume">
+      <h2>Resume</h2> -->
       <!-- ADD RESUME -->
       <!-- <p><a href="resume.pdf" download>Download my resume</a></p> -->
-    </section>
+    <!-- </section> -->
+
+    <button class="scroll-to-top hidden" aria-label="Scroll to top">
+      ⬆️
+    </button>
+    
   </body>
 </html>

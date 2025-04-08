@@ -14,7 +14,7 @@ body {
   padding: 0 1rem;
 }
 
-:root[data-theme="light"] {
+/* html[data-theme="light"] {
   --bg: #ffffff;
   --text: #222222;
   --accent: #00aaff;
@@ -25,15 +25,50 @@ body {
   --skills-text: #005781;
 }
 
-:root[data-theme="dark"] {
+html[data-theme="dark"] {
   --bg: #1e1e1e;
   --text: #f5f5f5;
   --accent: #66ccff;
   --card: #2c2c2c;
   --tooltip-bg: #005781;
   --tooltip-text: #f5f5f5;
-  --skills-bg: #005781;
+  --skills-bg: #1f2f39;
   --skills-text: #f5f5f5;
+} */
+
+body[data-theme="light"] {
+  --bg: #ffffff;
+  --text: #222222;
+  --accent: #00aaff;
+  --card: #f4f4f4;
+  --tooltip-bg: #005781;
+  --tooltip-text: #ffffff;
+  --skills-bg: #eef9ff;
+  --skills-text: #005781;
+}
+
+body[data-theme="dark"] {
+  --bg: #1e1e1e;
+  --text: #f5f5f5;
+  --accent: #66ccff;
+  --card: #2c2c2c;
+  --tooltip-bg: #005781;
+  --tooltip-text: #f5f5f5;
+  --skills-bg: #1f2f39;
+  --skills-text: #f5f5f5;
+}
+
+#theme-toggle {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: var(--text);
+  transition: transform 0.4s ease;
+}
+
+#theme-toggle.animate {
+  transform: rotate(180deg);
 }
 
 header {
@@ -65,13 +100,18 @@ header {
   color: var(--accent);
 }
 
-#theme-toggle {
+/* #theme-toggle {
   background: none;
   border: none;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   cursor: pointer;
+  transition: transform 0.4s ease;
   color: var(--text);
 }
+
+#theme-toggle.animate {
+  transform: rotate(180deg);
+} */
 
 .hero {
   display: flex;

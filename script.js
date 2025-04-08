@@ -32,16 +32,17 @@ function erase() {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-  if (titles.length) type();
+  // if (titles.length) type();
 
-  // Theme toggle
-  const themeToggle = document.getElementById("theme-toggle");
-  const html = document.documentElement;
-  themeToggle.addEventListener("click", () => {
-    const currentTheme = html.getAttribute("data-theme");
-    const newTheme = currentTheme === "light" ? "dark" : "light";
-    html.setAttribute("data-theme", newTheme);
-  });
+  // // Theme toggle (not the button use body instead)
+  // const themeToggle = document.getElementById("theme-toggle");
+  // const html = document.documentElement;
+  // themeToggle.addEventListener("click", () => {
+  //   const currentTheme = html.getAttribute("data-theme");
+  //   const newTheme = currentTheme === "light" ? "dark" : "light";
+  //   html.setAttribute("data-theme", newTheme);
+  //   console.log(`Theme switched to ${newTheme}`);
+  // });
 
   // Parallax scroll effect
   const parallaxItems = document.querySelectorAll(".parallax-item");
@@ -75,7 +76,7 @@ navLinks.forEach((link) => {
 // Scroll to top
 const scrollToTop = document.querySelector(".scroll-to-top");
 window.addEventListener("scroll", () => {
-  if (window.scrollY > 500) {
+  if (window.scrollY > 100) {
     scrollToTop.classList.remove("hidden");
   } else {
     scrollToTop.classList.add("hidden");
@@ -87,6 +88,37 @@ scrollToTop.addEventListener("click", () => {
     behavior: "smooth",
   });
 });
+
+// Theme toggle FIX (Kind of FIXED)
+
+// document.addEventListener("DOMContentLoaded", function () {
+//   const themeToggle = document.getElementById("theme-toggle");
+//   const html = document.documentElement;
+
+//   // Use actual emoji characters
+//   const sun = "🌞";
+//   const moon = "🌙";
+
+//   const savedTheme = localStorage.getItem("theme") || "light";
+//   html.setAttribute("data-theme", savedTheme);
+
+//   // Set emoji on initial load
+//   themeToggle.textContent = savedTheme === "dark" ? moon : sun;
+
+//   themeToggle.addEventListener("click", () => {
+//     themeToggle.classList.add("animate");
+
+//     setTimeout(() => themeToggle.classList.remove("animate"), 400);
+
+//     const currentTheme = html.getAttribute("data-theme");
+//     const newTheme = currentTheme === "light" ? "dark" : "light";
+//     html.setAttribute("data-theme", newTheme);
+//     localStorage.setItem("theme", newTheme);
+
+//     // Set emoji on toggle
+//     themeToggle.textContent = newTheme === "dark" ? moon : sun;
+//   });
+// });
 
 // TODO Tooltip position FIX
 // document.querySelectorAll(".tooltip").forEach((tooltip) => {
