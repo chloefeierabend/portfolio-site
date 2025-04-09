@@ -32,7 +32,7 @@ function erase() {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-  // if (titles.length) type();
+  if (titles.length) type();
 
   // // Theme toggle (not the button use body instead)
   // const themeToggle = document.getElementById("theme-toggle");
