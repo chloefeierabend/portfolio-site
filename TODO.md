@@ -1,4 +1,2 @@
-- add resume download
 - make hamburger menu for nav links for mobile/small screens
-- add projects section
-- add scroll to top button
+- come up with more TODO's
